@@ -213,9 +213,25 @@ class ParsedownExtra extends Parsedown
             $Block['element']['attributes'] = $this->parseAttributeData($attributeString);
 
             $Block['element']['text'] = substr($Block['element']['text'], 0, $matches[0][1]);
+        }else{
+            $attributeString = $this->createIdFromText($Block['element']['text']);
+            if ($attributeString != '') {
+                $Block['element']['attributes'] = $this->parseAttributeData($attributeString);
+            }
         }
 
         return $Block;
+    }
+
+    # ~
+    
+    protected function createIdFromText($text) 
+    {
+        $text = preg_replace("/[^a-z0-9. ]+/i", '', $text);
+        $text = preg_replace("/[ ]+/i", '-', $text);
+        $text = strtolower($text);
+
+        return "#" . $text;
     }
 
     #
