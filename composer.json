@@ -1,5 +1,5 @@
 {
-    "name": "erusev/parsedown-extra",
+    "name": "pathmissing/parsedown-extra",
     "description": "An extension of Parsedown that adds support for Markdown Extra.",
     "keywords": ["markdown", "markdown extra", "parser", "parsedown"],
     "homepage": "https://github.com/erusev/parsedown-extra",
@@ -10,6 +10,10 @@
             "name": "Emanuil Rusev",
             "email": "hello@erusev.com",
             "homepage": "http://erusev.com"
+        },
+        {
+            "name": "Marcus Döllerer",
+            "email": "m.doellerer@techdivision.com"
         }
     ],
     "require": {
