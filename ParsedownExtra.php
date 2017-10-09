@@ -227,7 +227,7 @@ class ParsedownExtra extends Parsedown
     
     protected function createIdFromText($text) 
     {
-        $text = preg_replace("/[^a-z0-9. ]+/i", '', $text);
+        $text = preg_replace("/[^a-z0-9- ]+/i", '', $text);
         $text = preg_replace("/[ ]+/i", '-', $text);
         $text = strtolower($text);
 
