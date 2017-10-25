@@ -17,7 +17,7 @@ class ParsedownExtra extends Parsedown
 {
     # ~
 
-    const version = '0.7.0';
+    const version = '0.7.4';
 
     # ~
 
@@ -239,11 +239,6 @@ class ParsedownExtra extends Parsedown
 
     protected function blockMarkupComplete($Block)
     {
-        if ( ! isset($Block['void']))
-        {
-            $Block['markup'] = $this->processTag($Block['markup']);
-        }
-
         return $Block;
     }
 
